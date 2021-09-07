@@ -1,6 +1,7 @@
-include <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-#define MAX_INPUT 100
+#define MAX_SIZE 100
 
 const char* ui() {
   printf("CHange to test github, with another change\n");
@@ -10,11 +11,11 @@ const char* ui() {
 
   printf("Enter input to be tokenized: ");
   
-  char input[100];
+  char* input = malloc(MAX_SIZE+1);
   int i_input = 0;
   int current = getchar();
   
-  while (current != '\n' && i_input < MAX_INPUT) {
+  while (current != '\n' && i_input < MAX_SIZE) {
     input[i_input] = current;
     ++i_input;
     printf("Putting character %c with %d int value into input string: %s \n", current, current, input);
@@ -22,12 +23,13 @@ const char* ui() {
   }
 
   printf("Final input string: %s \n", input);
-  return input
+  char* ret = input;
+  
 }
 
 int main() {
-  
-  printf("%s was what the user entered\n", ui());
+  const char * user_input = ui();
+  printf("%s was what the user entered\n", user_input);
   
   
 }
