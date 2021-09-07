@@ -3,7 +3,7 @@ include <stdio.h>
 #define MAX_INPUT 100
 
 const char* ui() {
-  printf("CHange to test github\n");
+  printf("CHange to test github, with another change\n");
   printf("------------------------\n");
   printf("---The tokenizer v0.1---\n");
   printf("------------------------\n");
