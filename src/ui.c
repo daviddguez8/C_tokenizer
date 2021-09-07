@@ -1,8 +1,9 @@
-#include <stdio.h>
+include <stdio.h>
 
 #define MAX_INPUT 100
 
 const char* ui() {
+  printf("CHange to test github\n");
   printf("------------------------\n");
   printf("---The tokenizer v0.1---\n");
   printf("------------------------\n");
