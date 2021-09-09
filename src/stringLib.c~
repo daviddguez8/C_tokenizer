@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int countWords(const char * word) {
+  const char * currPtr;
+  int wordCt = 0;
+  int multipleSpaceFlag = 1;
+  for(currPtr=word; *currPtr != '\0'; currPtr++){
+    if(*currPtr == '\t' || *currPtr == ' '){
+      if(multipleSpaceFlag == 0) {
+	wordCt++;
+      }
+      
+      multipleSpaceFlag=1;
+    }
+
+    multipleSpaceFlag=0;
+    printf("Address: %x contains -> %c\n", currPtr, *currPtr);
+  }
+  return wordCt;
+}
+
+int main() {
+  const char* word = "Hello world";
+  printf("Returned: %d\n", countWords(word));
+  
+   
+}

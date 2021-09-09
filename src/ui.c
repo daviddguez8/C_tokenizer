@@ -23,13 +23,22 @@ const char* ui() {
   }
 
   printf("Final input string: %s \n", input);
-  char* ret = input;
+  return input;
   
 }
 
 int main() {
   const char * user_input = ui();
-  printf("%s was what the user entered\n", user_input);
+  printf("%s was what the user entered, size of string: %d\n", user_input, sizeof(user_input));
+  int size=0;
+  const char* input_copy;
   
+  for(input_copy = user_input; *input_copy!='\0'; input_copy++){
+    size++;
+    printf("Address: %x\n", input_copy);
+    printf("Value: %c\n", *input_copy);
+    
+  }
+  printf("%s is what just got copied, true size is: %d\n", input_copy, size);
   
 }
