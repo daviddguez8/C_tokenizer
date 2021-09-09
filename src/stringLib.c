@@ -22,9 +22,8 @@ int countWords(const char * word) {
   return wordCt;
 }
 
-int main() {
-  const char* word = "Hello world";
-  printf("Returned: %d\n", countWords(word));
-  
-   
-}
+//int main() {
+  //const char* word = "Hello world";
+  //int wordCt = countWords(word);
+  //printf("Returned: %d\n", wordCt);  
+  //}

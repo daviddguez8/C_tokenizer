@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "stringLib.h"
 
 #define MAX_SIZE 100
 
@@ -24,21 +25,19 @@ const char* ui() {
 
   printf("Final input string: %s \n", input);
   return input;
-  
 }
 
 int main() {
   const char * user_input = ui();
-  printf("%s was what the user entered, size of string: %d\n", user_input, sizeof(user_input));
+  
   int size=0;
   const char* input_copy;
   
   for(input_copy = user_input; *input_copy!='\0'; input_copy++){
     size++;
-    printf("Address: %x\n", input_copy);
-    printf("Value: %c\n", *input_copy);
-    
+    //printf("Address: %x\n", input_copy);
+    //printf("Value: %c\n", *input_copy);
   }
-  printf("%s is what just got copied, true size is: %d\n", input_copy, size);
-  
+  int wordCt = countWords(user_input);
+  printf("%s is what the user entered, length size is: %d, with %d words\n", user_input, size, wordCt);  
 }

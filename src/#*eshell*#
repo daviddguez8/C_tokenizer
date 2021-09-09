@@ -1,28 +1,5 @@
 Welcome to the Emacs shell
 
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ ls
-README.md  history.h  tester.c  tokenizer.h  ui  ui.c  ui.c~  ui.o
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.o
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
-CHange to test github, with another change
-------------------------
----The tokenizer v0.1---
-------------------------
-Enter input to be tokenized: hello world
-Putting character h with 104 int value into input string: h 
-Putting character e with 101 int value into input string: he 
-Putting character l with 108 int value into input string: hel 
-Putting character l with 108 int value into input string: hell 
-Putting character o with 111 int value into input string: hello 
-Putting character   with 32 int value into input string: hello  
-Putting character w with 119 int value into input string: hello w 
-Putting character o with 111 int value into input string: hello wo 
-Putting character r with 114 int value into input string: hello wor 
-Putting character l with 108 int value into input string: hello worl 
-Putting character d with 100 int value into input string: hello world 
-Final input string: hello world 
-hello world was what the user entered
 ~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
 ~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.o
 ~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
@@ -44,217 +21,656 @@ Putting character l with 108 int value into input string: hello worl
 Putting character d with 100 int value into input string: hello world 
 Final input string: hello world 
 hello world was what the user entered, size of string: 8
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
-ui.c: In function ‘main’:
-ui.c:35:18: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
-   for(input_copy = user_input; t!='\0'; t++){
-                  ^
-ui.c:35:32: error: ‘t’ undeclared (first use in this function)
-   for(input_copy = user_input; t!='\0'; t++){
-                                ^
-ui.c:35:32: note: each undeclared identifier is reported only once for each function it appears in
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
-ui.c: In function ‘main’:
-ui.c:35:18: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
-   for(input_copy = user_input; input_copy!='\0'; input_copy++){
-                  ^
-ui.c:35:42: warning: comparison between pointer and zero character constant [-Wpointer-compare]
-   for(input_copy = user_input; input_copy!='\0'; input_copy++){
-                                          ^~
-ui.c:35:32: note: did you mean to dereference the pointer?
-   for(input_copy = user_input; input_copy!='\0'; input_copy++){
-                                ^
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
-ui.c: In function ‘main’:
-ui.c:35:18: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
-   for(input_copy = user_input; input_copy!='\0'; input_copy++){
-                  ^
-ui.c:35:42: warning: comparison between pointer and zero character constant [-Wpointer-compare]
-   for(input_copy = user_input; input_copy!='\0'; input_copy++){
-                                          ^~
-ui.c:35:32: note: did you mean to dereference the pointer?
-   for(input_copy = user_input; input_copy!='\0'; input_copy++){
-                                ^
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
-ui.c: In function ‘main’:
-ui.c:35:18: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
-   for(input_copy = user_input; input_copy!='\0'; input_copy++){
-                  ^
-ui.c:35:42: warning: comparison between pointer and zero character constant [-Wpointer-compare]
-   for(input_copy = user_input; input_copy!='\0'; input_copy++){
-                                          ^~
-ui.c:35:32: note: did you mean to dereference the pointer?
-   for(input_copy = user_input; input_copy!='\0'; input_copy++){
-                                ^
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.o
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
-CHange to test github, with another change
-------------------------
----The tokenizer v0.1---
-------------------------
-Enter input to be tokenized: hello world
-Putting character h with 104 int value into input string: h 
-Putting character e with 101 int value into input string: he 
-Putting character l with 108 int value into input string: hel 
-Putting character l with 108 int value into input string: hell 
-Putting character o with 111 int value into input string: hello 
-Putting character   with 32 int value into input string: hello  
-Putting character w with 119 int value into input string: hello w 
-Putting character o with 111 int value into input string: hello wo 
-Putting character r with 114 int value into input string: hello wor 
-Putting character l with 108 int value into input string: hello worl 
-Putting character d with 100 int value into input string: hello world 
-Final input string: hello world 
-hello world was what the user entered, size of string: 8
- is what just got copied, true size is: 11
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.o
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
-CHange to test github, with another change
-------------------------
----The tokenizer v0.1---
-------------------------
-Enter input to be tokenized: hello world
-Putting character h with 104 int value into input string: h 
-Putting character e with 101 int value into input string: he 
-Putting character l with 108 int value into input string: hel 
-Putting character l with 108 int value into input string: hell 
-Putting character o with 111 int value into input string: hello 
-Putting character   with 32 int value into input string: hello  
-Putting character w with 119 int value into input string: hello w 
-Putting character o with 111 int value into input string: hello wo 
-Putting character r with 114 int value into input string: hello wor 
-Putting character l with 108 int value into input string: hello worl 
-Putting character d with 100 int value into input string: hello world 
-Final input string: hello world 
-hello world was what the user entered, size of string: 8
-Address: f98670
+Address: 1d5b670
 Value: h
-Address: f98671
+Address: 1d5b671
 Value: e
-Address: f98672
+Address: 1d5b672
 Value: l
-Address: f98673
+Address: 1d5b673
 Value: l
-Address: f98674
+Address: 1d5b674
 Value: o
-Address: f98675
+Address: 1d5b675
 Value:  
-Address: f98676
+Address: 1d5b676
 Value: w
-Address: f98677
+Address: 1d5b677
 Value: o
-Address: f98678
+Address: 1d5b678
 Value: r
-Address: f98679
+Address: 1d5b679
 Value: l
-Address: f9867a
-Value: d
- is what just got copied, true size is: 11
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.o
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
-CHange to test github, with another change
-------------------------
----The tokenizer v0.1---
-------------------------
-Enter input to be tokenized: hello world
-Putting character h with 104 int value into input string: h 
-Putting character e with 101 int value into input string: he 
-Putting character l with 108 int value into input string: hel 
-Putting character l with 108 int value into input string: hell 
-Putting character o with 111 int value into input string: hello 
-Putting character   with 32 int value into input string: hello  
-Putting character w with 119 int value into input string: hello w 
-Putting character o with 111 int value into input string: hello wo 
-Putting character r with 114 int value into input string: hello wor 
-Putting character l with 108 int value into input string: hello worl 
-Putting character d with 100 int value into input string: hello world 
-Final input string: hello world 
-hello world was what the user entered, size of string: 8
-Address: 9e3670
-Value: h
-Address: 9e3671
-Value: e
-Address: 9e3672
-Value: l
-Address: 9e3673
-Value: l
-Address: 9e3674
-Value: o
-Address: 9e3675
-Value:  
-Address: 9e3676
-Value: w
-Address: 9e3677
-Value: o
-Address: 9e3678
-Value: r
-Address: 9e3679
-Value: l
-Address: 9e367a
+Address: 1d5b67a
 Value: d
  is what just got copied, true size is: 11
 ~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
 ~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
-stringLib.c: In function ‘countWords’:
-stringLib.c:7:14: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
-   for(currPtr=word; *currPtr != '\0'; currPtr++){
-              ^
-stringLib.c:13:7: error: ‘multipleSpaceFlag’ undeclared (first use in this function); did you mean ‘multipleBreakFlag’?
-       multipleSpaceFlag=1;
-       ^~~~~~~~~~~~~~~~~
-       multipleBreakFlag
-stringLib.c:13:7: note: each undeclared identifier is reported only once for each function it appears in
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
-stringLib.c: In function ‘countWords’:
-stringLib.c:13:7: error: ‘multipleSpaceFlag’ undeclared (first use in this function); did you mean ‘multipleBreakFlag’?
-       multipleSpaceFlag=1;
-       ^~~~~~~~~~~~~~~~~
-       multipleBreakFlag
-stringLib.c:13:7: note: each undeclared identifier is reported only once for each function it appears in
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
 ~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o stringLib stringLib.o
 ~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./stringLib
-Address: 400660 contains -> H
-Address: 400661 contains -> e
-Address: 400662 contains -> l
-Address: 400663 contains -> l
-Address: 400664 contains -> o
-Address: 400665 contains ->  
-Address: 400666 contains -> w
-Address: 400667 contains -> o
-Address: 400668 contains -> r
-Address: 400669 contains -> l
-Address: 40066a contains -> d
-Returned: 0
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o stringLib stringLib.o
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./stringLib
-Address: 400670 contains -> H
-Address: 400671 contains -> e
-Address: 400672 contains -> l
-Address: 400673 contains -> l
-Address: 400674 contains -> o
-Address: 400675 contains ->  
-Address: 400676 contains -> w
-Address: 400677 contains -> o
-Address: 400678 contains -> r
-Address: 400679 contains -> l
-Address: 40067a contains -> d
+HAddress: 4006d0 contains -> H
+eAddress: 4006d1 contains -> e
+lAddress: 4006d2 contains -> l
+lAddress: 4006d3 contains -> l
+oAddress: 4006d4 contains -> o
+ Address: 4006d5 contains ->  
+wAddress: 4006d6 contains -> w
+oAddress: 4006d7 contains -> o
+rAddress: 4006d8 contains -> r
+lAddress: 4006d9 contains -> l
+dAddress: 4006da contains -> d
 Returned: 1
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o stringLib stringLib.o
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./stringLib
+HAddress: 4006e0 contains -> H
+eAddress: 4006e1 contains -> e
+lAddress: 4006e2 contains -> l
+lAddress: 4006e3 contains -> l
+oAddress: 4006e4 contains -> o
+ Address: 4006e5 contains ->  
+wAddress: 4006e6 contains -> w
+oAddress: 4006e7 contains -> o
+rAddress: 4006e8 contains -> r
+lAddress: 4006e9 contains -> l
+dAddress: 4006ea contains -> d
+Returned: 1
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o stringLib stringLib.o
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./stringLib
+HAddress: 4006e0 contains -> H
+eAddress: 4006e1 contains -> e
+lAddress: 4006e2 contains -> l
+lAddress: 4006e3 contains -> l
+oAddress: 4006e4 contains -> o
+ Address: 4006e5 contains ->  
+wAddress: 4006e6 contains -> w
+oAddress: 4006e7 contains -> o
+rAddress: 4006e8 contains -> r
+lAddress: 4006e9 contains -> l
+dAddress: 4006ea contains -> d
+Returned: 1
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o stringLib stringLib.o
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./stringLib
+HAddress: 400718 contains -> H
+eAddress: 400719 contains -> e
+lAddress: 40071a contains -> l
+lAddress: 40071b contains -> l
+oAddress: 40071c contains -> o
+ Address: 40071d contains a space ->  
+Address: 40071d contains ->  
+wAddress: 40071e contains -> w
+oAddress: 40071f contains -> o
+rAddress: 400720 contains -> r
+lAddress: 400721 contains -> l
+dAddress: 400722 contains -> d
+Returned: 1
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o stringLib stringLib.o
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./stringLib
+HNew word found, starts with letter H
+Address: 400763 contains -> H
+eAddress: 400764 contains -> e
+lAddress: 400765 contains -> l
+lAddress: 400766 contains -> l
+oAddress: 400767 contains -> o
+ Address: 400768 contains a space ->  
+Address: 400768 contains ->  
+wAddress: 400769 contains -> w
+oAddress: 40076a contains -> o
+rAddress: 40076b contains -> r
+lAddress: 40076c contains -> l
+dAddress: 40076d contains -> d
+Returned: 1
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o stringLib stringLib.o
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./stringLib
+HIn a word, if 0 == 0, is a new word, char: H
+New word found, starts with letter H
+Address: 4007b3 contains -> H
+eIn a word, if 1 == 0, is a new word, char: e
+Address: 4007b4 contains -> e
+lIn a word, if 1 == 0, is a new word, char: l
+Address: 4007b5 contains -> l
+lIn a word, if 1 == 0, is a new word, char: l
+Address: 4007b6 contains -> l
+oIn a word, if 1 == 0, is a new word, char: o
+Address: 4007b7 contains -> o
+ Address: 4007b8 contains a space ->  
+Address: 4007b8 contains ->  
+wIn a word, if 1 == 0, is a new word, char: w
+Address: 4007b9 contains -> w
+oIn a word, if 1 == 0, is a new word, char: o
+Address: 4007ba contains -> o
+rIn a word, if 1 == 0, is a new word, char: r
+Address: 4007bb contains -> r
+lIn a word, if 1 == 0, is a new word, char: l
+Address: 4007bc contains -> l
+dIn a word, if 1 == 0, is a new word, char: d
+Address: 4007bd contains -> d
+Returned: 1
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ 
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o stringLib stringLib.o
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./stringLib
+HIn a word, if 0 == 0, is a new word, char: H
+New word found, starts with letter H
+Address: 4007b3 contains -> H
+eIn a word, if 1 == 0, is a new word, char: e
+Address: 4007b4 contains -> e
+lIn a word, if 1 == 0, is a new word, char: l
+Address: 4007b5 contains -> l
+lIn a word, if 1 == 0, is a new word, char: l
+Address: 4007b6 contains -> l
+oIn a word, if 1 == 0, is a new word, char: o
+Address: 4007b7 contains -> o
+ Address: 4007b8 contains a space ->  
+Address: 4007b8 contains ->  
+wIn a word, if 0 == 0, is a new word, char: w
+New word found, starts with letter w
+Address: 4007b9 contains -> w
+oIn a word, if 1 == 0, is a new word, char: o
+Address: 4007ba contains -> o
+rIn a word, if 1 == 0, is a new word, char: r
+Address: 4007bb contains -> r
+lIn a word, if 1 == 0, is a new word, char: l
+Address: 4007bc contains -> l
+dIn a word, if 1 == 0, is a new word, char: d
+Address: 4007bd contains -> d
+Returned: 2
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o stringLib stringLib.o
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./stringLib
+HAddress: 4006d0 contains -> H
+eAddress: 4006d1 contains -> e
+lAddress: 4006d2 contains -> l
+lAddress: 4006d3 contains -> l
+oAddress: 4006d4 contains -> o
+ Address: 4006d5 contains ->  
+wAddress: 4006d6 contains -> w
+oAddress: 4006d7 contains -> o
+rAddress: 4006d8 contains -> r
+lAddress: 4006d9 contains -> l
+dAddress: 4006da contains -> d
+Returned: 2
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./stringLib
+HAddress: 4006d0 contains -> H
+eAddress: 4006d1 contains -> e
+lAddress: 4006d2 contains -> l
+lAddress: 4006d3 contains -> l
+oAddress: 4006d4 contains -> o
+ Address: 4006d5 contains ->  
+wAddress: 4006d6 contains -> w
+oAddress: 4006d7 contains -> o
+rAddress: 4006d8 contains -> r
+lAddress: 4006d9 contains -> l
+dAddress: 4006da contains -> d
+Returned: 2
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ git add .
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ git commit -m "stringLib added, countWords() working"
+[vmBranch 03cdd9e] stringLib added, countWords() working
+ 8 files changed, 539 insertions(+), 2 deletions(-)
+ create mode 100644 src/#*eshell*#
+ create mode 100644 src/*eshell*
+ create mode 120000 src/.#*eshell*
+ create mode 100755 src/stringLib
+ create mode 100644 src/stringLib.c
+ create mode 100644 src/stringLib.c~
+ rewrite src/ui (60%)
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ git push
+Enter passphrase for key '/home/student/.ssh/id_ed25519': 
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (11/11), 5.49 KiB | 1.37 MiB/s, done.
+Total 11 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 3 local objects.        
+To github.com:utep-cs-systems-courses/tokenizer-daviddguez8.git
+   437e6d7..03cdd9e  vmBranch -> vmBranch
+error: update_ref failed for ref 'refs/remotes/origin/vmBranch': cannot update the ref 'refs/remotes/origin/vmBranch': unable to append to '.git/logs/refs/remotes/origin/vmBranch': Permission denied
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o stringLib stringLib.o
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./stringLib
+HAddress: 4006e0 contains -> H
+eAddress: 4006e1 contains -> e
+lAddress: 4006e2 contains -> l
+lAddress: 4006e3 contains -> l
+oAddress: 4006e4 contains -> o
+ Address: 4006e5 contains ->  
+wAddress: 4006e6 contains -> w
+oAddress: 4006e7 contains -> o
+rAddress: 4006e8 contains -> r
+lAddress: 4006e9 contains -> l
+dAddress: 4006ea contains -> d
+Returned: 2
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ git remote -v
+origin	git@github.com:utep-cs-systems-courses/tokenizer-daviddguez8.git (fetch)
+origin	git@github.com:utep-cs-systems-courses/tokenizer-daviddguez8.git (push)
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
+CHange to test github, with another change
+------------------------
+---The tokenizer v0.1---
+------------------------
+Enter input to be tokenized: hello world
+Putting character h with 104 int value into input string: h 
+Putting character e with 101 int value into input string: he 
+Putting character l with 108 int value into input string: hel 
+Putting character l with 108 int value into input string: hell 
+Putting character o with 111 int value into input string: hello 
+Putting character   with 32 int value into input string: hello  
+Putting character w with 119 int value into input string: hello w 
+Putting character o with 111 int value into input string: hello wo 
+Putting character r with 114 int value into input string: hello wor 
+Putting character l with 108 int value into input string: hello worl 
+Putting character d with 100 int value into input string: hello world 
+Final input string: hello world 
+hello world was what the user entered, size of string: 8
+Address: 1d25670
+Value: h
+Address: 1d25671
+Value: e
+Address: 1d25672
+Value: l
+Address: 1d25673
+Value: l
+Address: 1d25674
+Value: o
+Address: 1d25675
+Value:  
+Address: 1d25676
+Value: w
+Address: 1d25677
+Value: o
+Address: 1d25678
+Value: r
+Address: 1d25679
+Value: l
+Address: 1d2567a
+Value: d
+ is what just got copied, true size is: 11
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
+CHange to test github, with another change
+------------------------
+---The tokenizer v0.1---
+------------------------
+Enter input to be tokenized: hello world
+Putting character h with 104 int value into input string: h 
+Putting character e with 101 int value into input string: he 
+Putting character l with 108 int value into input string: hel 
+Putting character l with 108 int value into input string: hell 
+Putting character o with 111 int value into input string: hello 
+Putting character   with 32 int value into input string: hello  
+Putting character w with 119 int value into input string: hello w 
+Putting character o with 111 int value into input string: hello wo 
+Putting character r with 114 int value into input string: hello wor 
+Putting character l with 108 int value into input string: hello worl 
+Putting character d with 100 int value into input string: hello world 
+Final input string: hello world 
+hello world was what the user entered, size of string: 8
+Address: 2600670
+Value: h
+Address: 2600671
+Value: e
+Address: 2600672
+Value: l
+Address: 2600673
+Value: l
+Address: 2600674
+Value: o
+Address: 2600675
+Value:  
+Address: 2600676
+Value: w
+Address: 2600677
+Value: o
+Address: 2600678
+Value: r
+Address: 2600679
+Value: l
+Address: 260067a
+Value: d
+hello world is what the user entered, true size is: 11
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
+CHange to test github, with another change
+------------------------
+---The tokenizer v0.1---
+------------------------
+Enter input to be tokenized: hello world
+Putting character h with 104 int value into input string: h 
+Putting character e with 101 int value into input string: he 
+Putting character l with 108 int value into input string: hel 
+Putting character l with 108 int value into input string: hell 
+Putting character o with 111 int value into input string: hello 
+Putting character   with 32 int value into input string: hello  
+Putting character w with 119 int value into input string: hello w 
+Putting character o with 111 int value into input string: hello wo 
+Putting character r with 114 int value into input string: hello wor 
+Putting character l with 108 int value into input string: hello worl 
+Putting character d with 100 int value into input string: hello world 
+Final input string: hello world 
+hello world was what the user entered, size of string: 8
+Address: 229f670
+Value: h
+Address: 229f671
+Value: e
+Address: 229f672
+Value: l
+Address: 229f673
+Value: l
+Address: 229f674
+Value: o
+Address: 229f675
+Value:  
+Address: 229f676
+Value: w
+Address: 229f677
+Value: o
+Address: 229f678
+Value: r
+Address: 229f679
+Value: l
+Address: 229f67a
+Value: d
+hello world is what the user entered, true size is: 11
+8 size of user_input~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
+CHange to test github, with another change
+------------------------
+---The tokenizer v0.1---
+------------------------
+Enter input to be tokenized: hello world
+Putting character h with 104 int value into input string: h 
+Putting character e with 101 int value into input string: he 
+Putting character l with 108 int value into input string: hel 
+Putting character l with 108 int value into input string: hell 
+Putting character o with 111 int value into input string: hello 
+Putting character   with 32 int value into input string: hello  
+Putting character w with 119 int value into input string: hello w 
+Putting character o with 111 int value into input string: hello wo 
+Putting character r with 114 int value into input string: hello wor 
+Putting character l with 108 int value into input string: hello worl 
+Putting character d with 100 int value into input string: hello world 
+Final input string: hello world 
+hello world was what the user entered, size of string: 8
+Address: 1991670
+Value: h
+Address: 1991671
+Value: e
+Address: 1991672
+Value: l
+Address: 1991673
+Value: l
+Address: 1991674
+Value: o
+Address: 1991675
+Value:  
+Address: 1991676
+Value: w
+Address: 1991677
+Value: o
+Address: 1991678
+Value: r
+Address: 1991679
+Value: l
+Address: 199167a
+Value: d
+hello world is what the user entered, true size is: 11
+8 size of user_input1 size of a char~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
+CHange to test github, with another change
+------------------------
+---The tokenizer v0.1---
+------------------------
+Enter input to be tokenized: hello world
+Putting character h with 104 int value into input string: h 
+Putting character e with 101 int value into input string: he 
+Putting character l with 108 int value into input string: hel 
+Putting character l with 108 int value into input string: hell 
+Putting character o with 111 int value into input string: hello 
+Putting character   with 32 int value into input string: hello  
+Putting character w with 119 int value into input string: hello w 
+Putting character o with 111 int value into input string: hello wo 
+Putting character r with 114 int value into input string: hello wor 
+Putting character l with 108 int value into input string: hello worl 
+Putting character d with 100 int value into input string: hello world 
+Final input string: hello world 
+hello world was what the user entered, size of string: 8
+Address: 8eb670
+Value: h
+Address: 8eb671
+Value: e
+Address: 8eb672
+Value: l
+Address: 8eb673
+Value: l
+Address: 8eb674
+Value: o
+Address: 8eb675
+Value:  
+Address: 8eb676
+Value: w
+Address: 8eb677
+Value: o
+Address: 8eb678
+Value: r
+Address: 8eb679
+Value: l
+Address: 8eb67a
+Value: d
+hello world is what the user entered, true size is: 11
+8 size of user_input, should equal 100
+1 size of a char~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
+CHange to test github, with another change
+------------------------
+---The tokenizer v0.1---
+------------------------
+Enter input to be tokenized: hello world
+Putting character h with 104 int value into input string: h 
+Putting character e with 101 int value into input string: he 
+Putting character l with 108 int value into input string: hel 
+Putting character l with 108 int value into input string: hell 
+Putting character o with 111 int value into input string: hello 
+Putting character   with 32 int value into input string: hello  
+Putting character w with 119 int value into input string: hello w 
+Putting character o with 111 int value into input string: hello wo 
+Putting character r with 114 int value into input string: hello wor 
+Putting character l with 108 int value into input string: hello worl 
+Putting character d with 100 int value into input string: hello world 
+Final input string: hello world 
+hello world was what the user entered, size of string: 8
+Address: 1499670
+Value: h
+Address: 1499671
+Value: e
+Address: 1499672
+Value: l
+Address: 1499673
+Value: l
+Address: 1499674
+Value: o
+Address: 1499675
+Value:  
+Address: 1499676
+Value: w
+Address: 1499677
+Value: o
+Address: 1499678
+Value: r
+Address: 1499679
+Value: l
+Address: 149967a
+Value: d
+hello world is what the user entered, true size is: 11
+8 size of user_input, should equal 100
+1 size of a char~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
+CHange to test github, with another change
+------------------------
+---The tokenizer v0.1---
+------------------------
+Enter input to be tokenized: 8 sizeof(input)adsf
+Final input string: adsf 
+adsf was what the user entered, size of string: 8
+adsf is what the user entered, true size is: 4
+8 size of user_input, should equal 100
+1 size of a char~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
+ui.c: In function ‘ui’:
+ui.c:15:30: warning: implicit declaration of function ‘strlen’ [-Wimplicit-function-declaration]
+   printf("%d sizeof(input)", strlen(input));
+                              ^~~~~~
+ui.c:15:30: warning: incompatible implicit declaration of built-in function ‘strlen’
+ui.c:15:30: note: include ‘<string.h>’ or provide a declaration of ‘strlen’
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o ui ui.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
+CHange to test github, with another change
+------------------------
+---The tokenizer v0.1---
+------------------------
+Enter input to be tokenized: hello world
+Putting character h with 104 int value into input string: h 
+Putting character e with 101 int value into input string: he 
+Putting character l with 108 int value into input string: hel 
+Putting character l with 108 int value into input string: hell 
+Putting character o with 111 int value into input string: hello 
+Putting character   with 32 int value into input string: hello  
+Putting character w with 119 int value into input string: hello w 
+Putting character o with 111 int value into input string: hello wo 
+Putting character r with 114 int value into input string: hello wor 
+Putting character l with 108 int value into input string: hello worl 
+Putting character d with 100 int value into input string: hello world 
+Final input string: hello world 
+hello world is what the user entered, true size is: 11
+8 size of user_input, should equal 100
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ make ui
+gcc -c ui.c
+gcc -c stringLib.c
+gcc -o ui ui.c
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: /tmp/ccXcTfiB.o: in function `main':
+ui.c:(.text+0x102): undefined reference to `wordCount'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:8: ui] Error 1
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ make ui
+gcc -c ui.c
+ui.c: In function ‘main’:
+ui.c:42:16: warning: implicit declaration of function ‘wordCount’ [-Wimplicit-function-declaration]
+   int wordCt = wordCount(user_input);
+                ^~~~~~~~~
+gcc -c stringLib.c
+gcc -o ui ui.c
+ui.c: In function ‘main’:
+ui.c:42:16: warning: implicit declaration of function ‘wordCount’ [-Wimplicit-function-declaration]
+   int wordCt = wordCount(user_input);
+                ^~~~~~~~~
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: /tmp/ccVv0mtk.o: in function `main':
+ui.c:(.text+0x107): undefined reference to `wordCount'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:8: ui] Error 1
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ make ui
+gcc -c ui.c
+gcc -o ui ui.c
+/usr/lib64/gcc/x86_64-suse-linux/7/../../../../x86_64-suse-linux/bin/ld: /tmp/ccsjwwHc.o: in function `main':
+ui.c:(.text+0x102): undefined reference to `countWords'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:8: ui] Error 1
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ make ui
+gcc -o ui ui.o stringLib.o
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
+CHange to test github, with another change
+------------------------
+---The tokenizer v0.1---
+------------------------
+Enter input to be tokenized: hello world
+Putting character h with 104 int value into input string: h 
+Putting character e with 101 int value into input string: he 
+Putting character l with 108 int value into input string: hel 
+Putting character l with 108 int value into input string: hell 
+Putting character o with 111 int value into input string: hello 
+Putting character   with 32 int value into input string: hello  
+Putting character w with 119 int value into input string: hello w 
+Putting character o with 111 int value into input string: hello wo 
+Putting character r with 114 int value into input string: hello wor 
+Putting character l with 108 int value into input string: hello worl 
+Putting character d with 100 int value into input string: hello world 
+Final input string: hello world 
+hAddress: 1bed670 contains -> h
+eAddress: 1bed671 contains -> e
+lAddress: 1bed672 contains -> l
+lAddress: 1bed673 contains -> l
+oAddress: 1bed674 contains -> o
+ Address: 1bed675 contains ->  
+wAddress: 1bed676 contains -> w
+oAddress: 1bed677 contains -> o
+rAddress: 1bed678 contains -> r
+lAddress: 1bed679 contains -> l
+dAddress: 1bed67a contains -> d
+hello world is what the user entered, length size is: 11
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ make ui
+gcc -c ui.c
+gcc -o ui ui.o stringLib.o
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./ui
+CHange to test github, with another change
+------------------------
+---The tokenizer v0.1---
+------------------------
+Enter input to be tokenized: hello world
+Putting character h with 104 int value into input string: h 
+Putting character e with 101 int value into input string: he 
+Putting character l with 108 int value into input string: hel 
+Putting character l with 108 int value into input string: hell 
+Putting character o with 111 int value into input string: hello 
+Putting character   with 32 int value into input string: hello  
+Putting character w with 119 int value into input string: hello w 
+Putting character o with 111 int value into input string: hello wo 
+Putting character r with 114 int value into input string: hello wor 
+Putting character l with 108 int value into input string: hello worl 
+Putting character d with 100 int value into input string: hello world 
+Final input string: hello world 
+hAddress: 1903670 contains -> h
+eAddress: 1903671 contains -> e
+lAddress: 1903672 contains -> l
+lAddress: 1903673 contains -> l
+oAddress: 1903674 contains -> o
+ Address: 1903675 contains ->  
+wAddress: 1903676 contains -> w
+oAddress: 1903677 contains -> o
+rAddress: 1903678 contains -> r
+lAddress: 1903679 contains -> l
+dAddress: 190367a contains -> d
+hello world is what the user entered, length size is: 11, with 2 words
 ~/Desktop/assignment1/tokenizer-daviddguez8/src $ ls
-*eshell*   history.h  stringLib.c   stringLib.o  tokenizer.h  ui.c   ui.o
-README.md  stringLib  stringLib.c~  tester.c     ui           ui.c~  
+*eshell*   Makefile   README.md  stringLib    stringLib.c~  stringLib.h~  tester.c     ui    ui.c~
+*eshell*~  Makefile~  history.h  stringLib.c  stringLib.h   stringLib.o   tokenizer.h  ui.c  ui.o
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ rm *eshell*~
 ~/Desktop/assignment1/tokenizer-daviddguez8/src $ rm *eshell*
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ rm Makefile~
 ~/Desktop/assignment1/tokenizer-daviddguez8/src $ ls
-README.md  stringLib    stringLib.c~  tester.c     ui    ui.c~
-history.h  stringLib.c  stringLib.o   tokenizer.h  ui.c  ui.o
-~/Desktop/assignment1/tokenizer-daviddguez8/src $ ls -a
-.           ..         history.h  stringLib.c   stringLib.o  tokenizer.h  ui.c   ui.o
-.#*eshell*  README.md  stringLib  stringLib.c~  tester.c     ui           ui.c~  
+Makefile   history.h  stringLib.c   stringLib.h   stringLib.o  tokenizer.h  ui.c   ui.o
+README.md  stringLib  stringLib.c~  stringLib.h~  tester.c     ui           ui.c~  
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ rm ui.c~
 ~/Desktop/assignment1/tokenizer-daviddguez8/src $ ls
-README.md  stringLib    stringLib.c~  tester.c     ui    ui.c~
-history.h  stringLib.c  stringLib.o   tokenizer.h  ui.c  ui.o
+Makefile   history.h  stringLib.c   stringLib.h   stringLib.o  tokenizer.h  ui.c
+README.md  stringLib  stringLib.c~  stringLib.h~  tester.c     ui           ui.o
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ rm stringLib.c~
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ls
+Makefile   history.h  stringLib.c  stringLib.h~  tester.c     ui    ui.o
+README.md  stringLib  stringLib.h  stringLib.o   tokenizer.h  ui.c  
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ rm stringLib.h~
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ls
+Makefile   history.h  stringLib.c  stringLib.o  tokenizer.h  ui.c
+README.md  stringLib  stringLib.h  tester.c     ui           ui.o
 ~/Desktop/assignment1/tokenizer-daviddguez8/src $ 
