@@ -23,6 +23,7 @@ const char* ui() {
     current = getchar();
   }
 
+  input[i_input] = '\0';
   printf("Final input string: %s \n", input);
   return input;
 }
@@ -38,6 +39,6 @@ int main() {
     //printf("Address: %x\n", input_copy);
     //printf("Value: %c\n", *input_copy);
   }
-  int wordCt = countWords(user_input);
+  int wordCt = count_words(user_input);
   printf("%s is what the user entered, length size is: %d, with %d words\n", user_input, size, wordCt);  
 }

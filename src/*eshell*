@@ -1,0 +1,136 @@
+Welcome to the Emacs shell
+
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c 
+stringLib.c: In function ‘word_start’:
+stringLib.c:27:10: warning: return discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   return currPtr
+          ^~~~~~~
+stringLib.c:28:1: error: expected ‘;’ before ‘}’ token
+ }
+ ^
+stringLib.c: In function ‘main’:
+stringLib.c:33:16: warning: implicit declaration of function ‘countWords’; did you mean ‘count_words’? [-Wimplicit-function-declaration]
+   int wordCt = countWords(word);
+                ^~~~~~~~~~
+                count_words
+stringLib.c:36:48: error: expected ‘,’ or ‘;’ before ‘{’ token
+   const char * start_pointer = word_start(word){
+                                                ^
+stringLib.c:37:1: error: expected declaration or statement at end of input
+ }
+ ^
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c 
+stringLib.c: In function ‘word_start’:
+stringLib.c:27:10: warning: return discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   return currPtr;
+          ^~~~~~~
+stringLib.c: In function ‘main’:
+stringLib.c:33:16: warning: implicit declaration of function ‘countWords’; did you mean ‘count_words’? [-Wimplicit-function-declaration]
+   int wordCt = countWords(word);
+                ^~~~~~~~~~
+                count_words
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c 
+stringLib.c: In function ‘main’:
+stringLib.c:33:16: warning: implicit declaration of function ‘countWords’; did you mean ‘count_words’? [-Wimplicit-function-declaration]
+   int wordCt = countWords(word);
+                ^~~~~~~~~~
+                count_words
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c 
+stringLib.c: In function ‘main’:
+stringLib.c:33:16: warning: implicit declaration of function ‘count_word’; did you mean ‘count_words’? [-Wimplicit-function-declaration]
+   int wordCt = count_word(word);
+                ^~~~~~~~~~
+                count_words
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c 
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o testing stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./testing
+TAddress: 400724 contains -> T
+eAddress: 400725 contains -> e
+sAddress: 400726 contains -> s
+tAddress: 400727 contains -> t
+ Address: 400728 contains ->  
+wAddress: 400729 contains -> w
+oAddress: 40072a contains -> o
+rAddress: 40072b contains -> r
+dAddress: 40072c contains -> d
+Returned: 2, expecting: 2
+Returned: 400724, char: 84, expecting: 400724, char: T
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./testing
+TAddress: 400724 contains -> T
+eAddress: 400725 contains -> e
+sAddress: 400726 contains -> s
+tAddress: 400727 contains -> t
+ Address: 400728 contains ->  
+wAddress: 400729 contains -> w
+oAddress: 40072a contains -> o
+rAddress: 40072b contains -> r
+dAddress: 40072c contains -> d
+Returned: 2, expecting: 2
+Returned: 400724, char: 84, expecting: 400724, char: T
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c 
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o testing stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./testing
+Test wordReturned: 2, expecting: 2
+Returned: 4006e8, char: 84, expecting: 4006e8, char: T
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c 
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o testing stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./testing
+Test wordReturned: 2, expecting: 2
+Returned: 4006e8, char: T, expecting: 4006e8, char: T
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c 
+stringLib.c: In function ‘word_end’:
+stringLib.c:36:15: warning: assignment discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   for(currPtr = word; word != '\0'; currPtr++){
+               ^
+stringLib.c:36:28: warning: comparison between pointer and zero character constant [-Wpointer-compare]
+   for(currPtr = word; word != '\0'; currPtr++){
+                            ^~
+stringLib.c:36:23: note: did you mean to dereference the pointer?
+   for(currPtr = word; word != '\0'; currPtr++){
+                       ^
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c 
+stringLib.c: In function ‘word_end’:
+stringLib.c:36:28: warning: comparison between pointer and zero character constant [-Wpointer-compare]
+   for(currPtr = word; word != '\0'; currPtr++){
+                            ^~
+stringLib.c:36:23: note: did you mean to dereference the pointer?
+   for(currPtr = word; word != '\0'; currPtr++){
+                       ^
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c 
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o testing stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./testing
+Test wordReturned: 2, expecting: 2
+Returned: 400728, char: T, expecting: 400728, char: T
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c 
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o testing stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./testing
+Test wordReturned: 2, expecting: 2
+Returned: 400758, char: T, expecting: 400758, char: T
+Returned: 40075c, char:  , expecting char: d~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c 
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o testing stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./testing
+Test wordReturned: 2, expecting: 2
+Returned: 400758, char: T, expecting: 400758, char: T
+Returned: 40075c, char:  , expecting char: ' '
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
+stringLib.c: In function ‘main’:
+stringLib.c:58:59: error: ‘next_pointer’ undeclared (first use in this function); did you mean ‘end_pointer’?
+   printf("Returned: %x, char: %c, expecting char: 'w'\n", next_pointer, *next_pointer);
+                                                           ^~~~~~~~~~~~
+                                                           end_pointer
+stringLib.c:58:59: note: each undeclared identifier is reported only once for each function it appears in
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o testing stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./testing
+Test wordReturned: 2, expecting: 2
+Returned: 400788, char: T, expecting: 400788, char: T
+Returned: 40078c, char:  , expecting char: ' '
+Returned: 40078c, char:  , expecting char: 'w'
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -c stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ gcc -o testing stringLib.c
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ ./testing
+Test wordReturned: 2, expecting: 2
+Returned: 4007a8, char: T, expecting: 4007a8, char: T
+Returned: 4007ac, char:  , expecting char: ' '
+Returned: 4007ad, char: w, expecting char: 'w'
+~/Desktop/assignment1/tokenizer-daviddguez8/src $ 
