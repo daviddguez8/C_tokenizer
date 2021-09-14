@@ -1,8 +1,8 @@
-ui.o: ui.c stringLib.h
+ui.o: ui.c tokenizer.h
 	gcc -c ui.c
 
-stringLib.o: stringLib.c stringLib.h
-	gcc -c stringLib.c
+tokenizer.o: tokenizer.c tokenizer.h
+	gcc -c tokenizer.c
 
 ui: ui.o stringLib.o
-	gcc -o ui ui.o stringLib.o
+	gcc -o ui ui.o tokenizer.o

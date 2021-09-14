@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "stringLib.h"
+#include "tokenizer.h"
 
 #define MAX_SIZE 100
 
@@ -16,15 +16,15 @@ const char* ui() {
   int i_input = 0;
   int current = getchar();
   
-  while (current != '\n' && i_input < MAX_SIZE) {
+  while (current != '\n' && i_input < MAX_SIZE-1) {
     input[i_input] = current;
     ++i_input;
-    printf("Putting character %c with %d int value into input string: %s \n", current, current, input);
+    //printf("Putting character %c with %d int value into input string: %s \n", current, current, input);
     current = getchar();
   }
 
   input[i_input] = '\0';
-  printf("Final input string: %s \n", input);
+  //printf("Final input string: %s \n", input);
   return input;
 }
 
@@ -40,5 +40,11 @@ int main() {
     //printf("Value: %c\n", *input_copy);
   }
   int wordCt = count_words(user_input);
-  printf("%s is what the user entered, length size is: %d, with %d words\n", user_input, size, wordCt);  
+  printf("%s is what the user entered, length size is: %d, with %d words\n", user_input, size, wordCt);
+
+  const char* word_start_ptr = word_start(user_input);
+  const char* word_end_ptr = word_end(user_input);
+  
+  printf("Your first word starts at %x with char: %c\n Ends at %x, with char: %c\n",
+	 word_start_ptr, *word_start_ptr, word_end_ptr, *word_end_ptr);
 }
