@@ -23,9 +23,9 @@ history and tokenized words.
 * stringLib.c
 * TODO
 
-## stringLib.c
+## tokenizer.c
 
-Contains usefule string manipulation functions. Such as count_words(), word_start()...
+Contains useful string manipulation functions. Such as count_words(), word_start()...
 
 ### Functions:
 
