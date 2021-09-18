@@ -28,10 +28,10 @@ char* ui() {
 }
 
 int main() {
+  
   char * user_input = ui();
-
+  
   char ** input_tokenized = tokenize(user_input);
-
   printf("TOKENIZED user input on address: %x, contains: ", *input_tokenized);
   print_tokens(input_tokenized);
 }
