@@ -4,5 +4,5 @@ ui.o: ui.c tokenizer.h
 tokenizer.o: tokenizer.c tokenizer.h
 	gcc -c tokenizer.c
 
-ui: ui.o stringLib.o
+ui: ui.o tokenizer.o
 	gcc -o ui ui.o tokenizer.o

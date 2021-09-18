@@ -4,8 +4,7 @@
 
 #define MAX_SIZE 100
 
-const char* ui() {
-  printf("CHange to test github, with another change\n");
+char* ui() {
   printf("------------------------\n");
   printf("---The tokenizer v0.1---\n");
   printf("------------------------\n");
@@ -29,22 +28,10 @@ const char* ui() {
 }
 
 int main() {
-  const char * user_input = ui();
-  
-  int size=0;
-  const char* input_copy;
-  
-  for(input_copy = user_input; *input_copy!='\0'; input_copy++){
-    size++;
-    //printf("Address: %x\n", input_copy);
-    //printf("Value: %c\n", *input_copy);
-  }
-  int wordCt = count_words(user_input);
-  printf("%s is what the user entered, length size is: %d, with %d words\n", user_input, size, wordCt);
+  char * user_input = ui();
 
-  const char* word_start_ptr = word_start(user_input);
-  const char* word_end_ptr = word_end(user_input);
-  
-  printf("Your first word starts at %x with char: %c\n Ends at %x, with char: %c\n",
-	 word_start_ptr, *word_start_ptr, word_end_ptr, *word_end_ptr);
+  char ** input_tokenized = tokenize(user_input);
+
+  printf("TOKENIZED user input on address: %x, contains: ", *input_tokenized);
+  print_tokens(input_tokenized);
 }
