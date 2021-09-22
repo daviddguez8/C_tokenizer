@@ -3,7 +3,7 @@
 #include "history.h"
 
 List* init_history() {
-  List* newList = malloc(sizeof(List));  
+  List* newList = malloc(sizeof(List)*100);  
   return newList;
 }
 
@@ -42,7 +42,7 @@ char* get_history(List* list, int id) {
     currItem = currItem->next;
   }
   printf("Id not found\n");
-  return 0;
+  return "";
 }
 
 void print_history(List* list) {
@@ -50,7 +50,7 @@ void print_history(List* list) {
   int count = 0;
   
   while(currItem != 0) {
-    printf("Item %d: %s\n", currItem->id, currItem->str);
+    printf("Id# %d: %s\n", currItem->id, currItem->str);
     currItem = currItem->next;
   }
 }
@@ -71,7 +71,7 @@ void free_history(List* list) {
 }
 
 
-
+/*
 int main() {
   List* list = init_history();
   
@@ -91,4 +91,4 @@ int main() {
   printf("%x, not freed\n", list);
   printf("%x, freed?\n", list);
   
-}
+  }*/

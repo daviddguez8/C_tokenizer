@@ -4,5 +4,8 @@ ui.o: ui.c tokenizer.h
 tokenizer.o: tokenizer.c tokenizer.h
 	gcc -c tokenizer.c
 
-ui: ui.o tokenizer.o
-	gcc -o ui ui.o tokenizer.o
+history.o: history.c history.h
+	gcc -c history.c
+
+ui: ui.o tokenizer.o history.o
+	gcc -o ui ui.o tokenizer.o history.o

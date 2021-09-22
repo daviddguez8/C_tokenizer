@@ -34,7 +34,7 @@ char *copy_str(char *inStr, short len);
    space-separated tokens from zero-terminated str.
 
    For example, tokenize("hello world string") would result in:
-     tokens[0] = "hello"
+    tokens[0] = "hello"
      tokens[1] = "world"
      tokens[2] = "string"
      tokens[3] = 0
@@ -58,5 +58,8 @@ char *get_token(char **tokens, int id);
 
 /* Frees all tokens and the vector containing them. */
 void free_tokens(char **tokens);
+
+//returns 1 if str1 == str2
+int strcmp(char* str1, char* str2);
 
 #endif

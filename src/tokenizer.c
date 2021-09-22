@@ -94,23 +94,26 @@ char ** tokenize(char* words){
     char * startPtr = word_start(words);
     char * endPtr = word_end(words);
     int length = endPtr - startPtr;
-   
+    
     char * allocatedStr = copy_str(startPtr, length);
-
     *currToken = allocatedStr;
-   
+    //printf("String starts on %x and is %s\n", allocatedStr, allocatedStr);
+    //printf("CurrToken contains ptr address %x, pointing to string starting on %x, str: %s\n",
+    //currToken, *currToken, *currToken);
+
     words = endPtr;
     ++currToken;
     --wordCt;
   }
-  *currToken = 0;
+  *currToken = NULL;
+  
   return tokens;
 }
 
 void print_tokens(char** tokens){
   char **curr = tokens;
   
-  while(*curr != 0) {
+  while(*curr != NULL) {
     printf("%s ", *curr);
     ++curr;
   }
@@ -119,8 +122,7 @@ void print_tokens(char** tokens){
 
 char* get_token(char** tokens, int id) {
   char** curr = tokens;
-
-  while (id > 0 && *curr != 0){
+  while (id > 0 && *curr != NULL){
     curr++;
     id--;
   }
@@ -131,13 +133,29 @@ void free_tokens(char** tokens) {
   char** curr = tokens;
 
   while(*curr != 0) {
+    printf("Freeing word %s\n", *curr);
     free(*curr);
   }
   free(tokens);
 }
 
+//returns 1 if str1 == str2
+int strcmp(char* str1, char* str2) {
+  if(str1 == str2) { return 1; }
+  
+  int flag = 1;
+  while(*str1 != '\0' || *str2 != '\0') {
+    
+    if(*str1 != *str2) {
+      flag = 0;
+      break;
+    }
+    str1++;
+    str2++;
+  }
+  return flag;
+}
 
-				   
 
 //tests
 int test_space_char(){
@@ -253,7 +271,9 @@ int test_tokenize() {
   char* words = "Hello world";
   char** tokens = tokenize(words);
   char ** currToken = tokens;
+  printf("Print tokens: ");
   print_tokens(tokens);
+  
   printf("%s, expecting to be Hello\n", *currToken);
   ++currToken;
   printf("%s, expecting to be world\n", *currToken);
@@ -266,6 +286,9 @@ int test_tokenize() {
   char ** tokens2 = tokenize(words2);
   currToken = tokens2;
   
+  printf("Print tokens: ");
+  print_tokens(tokens2);
+
   printf("%s, expecting to be single\n", *currToken);
   ++currToken;
   printf("%s, expecting to be (null)\n", *currToken);
@@ -281,16 +304,35 @@ int test_get_token(){
   printf("tokens[2] is %s, expecting 123\n", get_token(tokens, 2));
 }
 
+
+int test_strcmp() {
+  char* str1 = "Hello";
+  char* str_1 = "Hello";
+  char* str2 = "Hello world";
+  char* str3 = "Hello world";
+  char* str4 = "Hello\t world";
+  char* str5 = "";
+  char* str6 = "";
+
+  printf("Test 1: 'Hello' with 'Hello', expecting: 1, result: %d\n", strcmp(str1, "Hello")); 
+  printf("Test 2: 'Hello' with 'Hello world', expecting: 0, result: %d\n", strcmp(str1, "Hello world"));
+  printf("Test 3: 'Hello world' with 'Hello world', expecting: 1, result: %d\n", strcmp(str2, str3));
+  printf("Test 4: '' with '', expecting: 1, result: %d\n", strcmp(str5, str6));
+  printf("Test 5: '' with 'Hello', expecting: 0, result: %d\n", strcmp(str5, str1));
+  printf("Test 6: 'Hello world' with 'Hello\t world', expecting: 0, result: %d\n", strcmp(str2, str4));
+}
+
 /*
 int main() {
   //printf("main/n");
   //test_count_words();
-  //test_word_start();
+  test_word_start();
   //test_word_end();
   //test_space_char();
   //test_non_space_char();
   //test_copy_str();
   //test_tokenize();
-  test_get_token();
-} */
+  //test_get_token();
+  //test_strcmp();
+  } */
 
