@@ -48,7 +48,9 @@ char* ui() {
     if(strcmp(input, ":3") == 1) {
       print_history(history);
       printf("Select an id number from the previous list to select that input: ");
-      int selection = getchar();
+      int selection;
+      scanf("%d", &selection);
+      printf("Selected %d\n", selection);
       newWord = 0;
       input = get_history(history, selection);
       freeInputBuffer(); 
@@ -60,6 +62,7 @@ char* ui() {
     if(newWord == 1) {
       add_history(history, input);
     }
+    input = getInput();
   }  
 }
 

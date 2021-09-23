@@ -114,7 +114,7 @@ void print_tokens(char** tokens){
   char **curr = tokens;
   
   while(*curr != NULL) {
-    printf("%s ", *curr);
+    printf("Word allocated at : %x: \"%s\"\n", *curr, *curr);
     ++curr;
   }
   printf("\n");
@@ -133,8 +133,9 @@ void free_tokens(char** tokens) {
   char** curr = tokens;
 
   while(*curr != 0) {
-    printf("Freeing word %s\n", *curr);
+    printf("Freeing word \"%s\"\n", *curr);
     free(*curr);
+    curr++;
   }
   free(tokens);
 }
