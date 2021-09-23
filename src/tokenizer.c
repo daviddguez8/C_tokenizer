@@ -295,6 +295,9 @@ int test_tokenize() {
   
 }
 
+int test_free_token(){
+
+}
 int test_get_token(){
   char* words = "Hello world 123";
   char** tokens = tokenize(words);
