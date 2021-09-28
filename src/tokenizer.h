@@ -60,6 +60,6 @@ char *get_token(char **tokens, int id);
 void free_tokens(char **tokens);
 
 //returns 1 if str1 == str2
-int strcmp(char* str1, char* str2);
+int strequals(char* str1, char* str2);
 
 #endif

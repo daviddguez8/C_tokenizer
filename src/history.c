@@ -3,7 +3,7 @@
 #include "history.h"
 
 List* init_history() {
-  List* newList = malloc(sizeof(List)*100);  
+  List* newList = malloc(sizeof(Item)*100);  
   return newList;
 }
 
@@ -13,13 +13,14 @@ void add_history(List* list, char*str) {
     list->root = malloc(sizeof(Item));
     list->root->id = 0;
     list->root->str = str;
+    list->root->next = NULL;
     return;
   }
   
   int count = 1;
   Item* currItem = list->root;
     
-  while(currItem->next != 0) {
+  while(currItem->next != NULL) {
     currItem = currItem->next;
     ++count;
   }
@@ -29,7 +30,8 @@ void add_history(List* list, char*str) {
   currItem = currItem->next;
   //initialize attributes
   currItem->id = count;
-  currItem->str = str; 
+  currItem->str = str;
+  currItem->next = NULL; 
 }
 
 char* get_history(List* list, int id) {

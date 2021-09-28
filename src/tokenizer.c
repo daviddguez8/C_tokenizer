@@ -141,7 +141,7 @@ void free_tokens(char** tokens) {
 }
 
 //returns 1 if str1 == str2
-int strcmp(char* str1, char* str2) {
+int strequals(char* str1, char* str2) {
   if(str1 == str2) { return 1; }
   
   int flag = 1;
@@ -159,7 +159,8 @@ int strcmp(char* str1, char* str2) {
 
 
 //tests
-int test_space_char(){
+/* 
+void test_space_char(){
   printf("TESTING SPACE_CHAR()******************\n");
   char space = ' ';
   char new_line = '\n';
@@ -173,7 +174,7 @@ int test_space_char(){
   printf("End of test ****************************\n");
 }
 
-int test_non_space_char(){
+void test_non_space_char(){
   printf("TESTING SPACE_CHAR()******************\n");
   char space = ' ';
   char new_line = '\n';
@@ -187,7 +188,7 @@ int test_non_space_char(){
   printf("End of test ****************************\n");
 }
 
-int test_count_words(){
+void test_count_words(){
   printf("TESTING COUNT_WORDS()******************\n");
   char word[] = "   Test word";
   int wordCt = count_words(word);
@@ -195,7 +196,7 @@ int test_count_words(){
   printf("End of test ****************************\n");
 }
 
-int test_word_start() {
+void test_word_start() {
   printf("TESTING word_start()*******************\n");
   char test1[] = "singleWord";
   char test2[] = "    space in front";
@@ -218,7 +219,7 @@ int test_word_start() {
   printf("end of test *************************************\n");
 }
 
-int test_word_end() {
+void test_word_end() {
   printf("TESTING word_end()*******************\n");
   char test1[] = "singleWord";
   char test2[] = "    space in front";
@@ -249,7 +250,7 @@ int test_word_end() {
   printf("****end of test*******************\n");
 }
 
-int test_copy_str() {
+void test_copy_str() {
   char str1[] = {'t','e','s','t','i','n','g','\0'};
   
   char* result1 = copy_str(str1, 0); //copying 0 elements from str
@@ -267,7 +268,7 @@ int test_copy_str() {
 	 
 }
 
-int test_tokenize() {
+void test_tokenize() {
   printf("TEST1\n");
   char* words = "Hello world";
   char** tokens = tokenize(words);
@@ -296,10 +297,11 @@ int test_tokenize() {
   
 }
 
-int test_free_token(){
+void test_free_token(){
 
 }
-int test_get_token(){
+
+void test_get_token(){
   char* words = "Hello world 123";
   char** tokens = tokenize(words);
 
@@ -309,7 +311,7 @@ int test_get_token(){
 }
 
 
-int test_strcmp() {
+void test_strcmp() {
   char* str1 = "Hello";
   char* str_1 = "Hello";
   char* str2 = "Hello world";
@@ -318,15 +320,15 @@ int test_strcmp() {
   char* str5 = "";
   char* str6 = "";
 
-  printf("Test 1: 'Hello' with 'Hello', expecting: 1, result: %d\n", strcmp(str1, "Hello")); 
-  printf("Test 2: 'Hello' with 'Hello world', expecting: 0, result: %d\n", strcmp(str1, "Hello world"));
-  printf("Test 3: 'Hello world' with 'Hello world', expecting: 1, result: %d\n", strcmp(str2, str3));
-  printf("Test 4: '' with '', expecting: 1, result: %d\n", strcmp(str5, str6));
-  printf("Test 5: '' with 'Hello', expecting: 0, result: %d\n", strcmp(str5, str1));
-  printf("Test 6: 'Hello world' with 'Hello\t world', expecting: 0, result: %d\n", strcmp(str2, str4));
+  printf("Test 1: 'Hello' with 'Hello', expecting: 1, result: %d\n", strequals(str1, "Hello")); 
+  printf("Test 2: 'Hello' with 'Hello world', expecting: 0, result: %d\n", strequals(str1, "Hello world"));
+  printf("Test 3: 'Hello world' with 'Hello world', expecting: 1, result: %d\n", strequals(str2, str3));
+  printf("Test 4: '' with '', expecting: 1, result: %d\n", strequals(str5, str6));
+  printf("Test 5: '' with 'Hello', expecting: 0, result: %d\n", strequals(str5, str1));
+  printf("Test 6: 'Hello world' with 'Hello\t world', expecting: 0, result: %d\n", strequals(str2, str4));
 }
 
-/*
+
 int main() {
   //printf("main/n");
   //test_count_words();

@@ -26,11 +26,11 @@ char* getInput() {
   }
 
   input[i_input] = '\0';
-  //printf("Final input string: %s \n", input);
+  
   return input;
 }
 
-char* ui() {
+void ui() {
   List* history = init_history();
   
   printf("-----------------------------------------------\n");
@@ -42,10 +42,10 @@ char* ui() {
 
   char* input = getInput();
   int newWord;
-  while(strcmp(input, "exit") == 0) {
+  while(strequals(input, "exit") == 0) {
     newWord = 1;
     //if the input was \3, display history and allow user to select input from there
-    if(strcmp(input, ":3") == 1) {
+    if(strequals(input, ":3") == 1) {
       print_history(history);
       printf("Select an id number from the previous list to select that input: ");
       int selection;
@@ -58,7 +58,9 @@ char* ui() {
 
     char ** tokens = tokenize(input);
     print_tokens(tokens);
+
     free_tokens(tokens);
+    
     if(newWord == 1) {
       add_history(history, input);
     }
@@ -67,10 +69,5 @@ char* ui() {
 }
 
 int main() {
-  
-  char * user_input = ui();
-  
-  char ** input_tokenized = tokenize(user_input);
-  printf("TOKENIZED user input on address: %x, contains: ", *input_tokenized);
-  print_tokens(input_tokenized);
+  ui();
 }
