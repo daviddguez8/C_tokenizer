@@ -138,6 +138,7 @@ void free_tokens(char** tokens) {
     curr++;
   }
   free(tokens);
+  printf("\n\n");
 }
 
 //returns 1 if str1 == str2

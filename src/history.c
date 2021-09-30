@@ -3,14 +3,15 @@
 #include "history.h"
 
 List* init_history() {
-  List* newList = malloc(sizeof(Item)*100);  
+  List* newList = (List*)malloc(sizeof(List));
+  newList->root = NULL;
   return newList;
 }
 
 void add_history(List* list, char*str) {
   //list is empty
-  if(list->root == 0) {
-    list->root = malloc(sizeof(Item));
+  if(list->root == NULL) {
+    list->root = (Item*)malloc(sizeof(Item));
     list->root->id = 0;
     list->root->str = str;
     list->root->next = NULL;
@@ -26,7 +27,7 @@ void add_history(List* list, char*str) {
   }
 
   //allocate memory for this new node
-  currItem->next = malloc(sizeof(Item));
+  currItem->next = (Item*)malloc(sizeof(Item));
   currItem = currItem->next;
   //initialize attributes
   currItem->id = count;
@@ -37,7 +38,7 @@ void add_history(List* list, char*str) {
 char* get_history(List* list, int id) {
   Item* currItem = list->root;
   
-  while(currItem != 0) {
+  while(currItem != NULL) {
     if(currItem->id == id) {
       return currItem->str;
     }
@@ -63,6 +64,7 @@ void free_items(Item* item) {
   }
   printf("Freeing item: %s on address %x\n", item->str, item);
   free(item);
+  printf("\n\n");
 }
 
 void free_history(List* list) {

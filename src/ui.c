@@ -65,7 +65,10 @@ void ui() {
       add_history(history, input);
     }
     input = getInput();
-  }  
+  }
+  
+  printf("Exiting the tokenizer.....\n");
+  free_history(history);  
 }
 
 int main() {
