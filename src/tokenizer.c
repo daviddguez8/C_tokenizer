@@ -20,20 +20,20 @@ int count_words(char * word) {
   int wordCt = 0;
   int multipleSpaceFlag = 1;
   int onWord = 0;
+
   for(currPtr=word; *currPtr != '\0'; currPtr++){
     if(*currPtr == '\t' || *currPtr == ' '){
       onWord = 0;
     } else {  
       //if we just entered to this word, count it
       if(onWord == 0) {
-	wordCt++;
+	      wordCt++;
       }
-      //indicate that you are inside an already counted word
+      //indicates that we are inside an already counted word
       onWord = 1;
     }
-    
-    //printf("Address: %x contains -> %c\n", currPtr, *currPtr);
   }
+  
   return wordCt;
 }
 

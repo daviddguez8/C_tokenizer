@@ -17,7 +17,7 @@ char* getInput() {
   
   char* input = malloc(MAX_SIZE+1);
   int i_input = 0;
-  int current = getchar();
+  char current = getchar();
   
   while (current != '\n' && i_input < MAX_SIZE-1) {
     input[i_input] = current;
@@ -36,7 +36,7 @@ void ui() {
   printf("-----------------------------------------------\n");
   printf("--------------The tokenizer v0.1---------------\n");
   printf("-----------------------------------------------\n");
-  printf("-Enter :3 to display history and select input--\n");
+  printf("-Enter /h to display history and select input--\n");
   printf("-Enter exit to exit the program----------------\n");
   printf("-----------------------------------------------\n\n\n");
 
@@ -45,7 +45,7 @@ void ui() {
   while(strequals(input, "exit") == 0) {
     newWord = 1;
     //if the input was \3, display history and allow user to select input from there
-    if(strequals(input, ":3") == 1) {
+    if(strequals(input, "/h") == 1) {
       print_history(history);
       printf("Select an id number from the previous list to select that input: ");
       int selection;
@@ -66,7 +66,7 @@ void ui() {
     }
     input = getInput();
   }
-  
+
   printf("Exiting the tokenizer.....\n");
   free_history(history);  
 }

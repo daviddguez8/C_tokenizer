@@ -1,4 +1,4 @@
-ui.o: ui.c tokenizer.h
+ui.o: ui.c tokenizer.h history.h
 	gcc -c ui.c
 
 tokenizer.o: tokenizer.c tokenizer.h
@@ -9,3 +9,6 @@ history.o: history.c history.h
 
 ui: ui.o tokenizer.o history.o
 	gcc -o ui ui.o tokenizer.o history.o
+
+ui_cleanup:
+	rm *.o
