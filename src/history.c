@@ -36,6 +36,10 @@ void add_history(List* list, char*str) {
 }
 
 char* get_history(List* list, int id) {
+  if (id < 0) {
+    return "";
+  }
+  
   Item* currItem = list->root;
   
   while(currItem != NULL) {

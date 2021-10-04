@@ -57,4 +57,21 @@ end of the first word in the phrase (exclusive).
 
 Responsible for keeping track of the inputs entered by the user. Using a linked lists, stores tokenized strings in history
 
+* **init_history()**:
+Initializes and allocates memory for a list
 
+* **add_history(List\* list, char\* str)**: 
+Given a string str, it traverses the list and adds str to the end of the list, it handles allocation for each item.
+
+
+* **get_history(List\* list, int id)**:
+Given an int id, traverses the list and returns the content of the item at position id. It returns and empty string len(list) -1 < id.
+
+* **print_history(List\* list)**:
+Given a list, prints all the elements in the list in a nice readable format.
+
+* **free_items(Item\* item)**:
+It frees item and all the following items after it.
+
+* **free_history(Item\* list)**:
+Given a history list, it frees the memory allocated for each item in the list and also for the list itself.
