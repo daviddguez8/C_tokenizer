@@ -18,11 +18,6 @@ Is where all the interaction will take place. This is will act as the only point
 communication with the user. Here the user will enter the desired phrase, and receive the 
 history and tokenized words. 
 
-### Dependecies
-
-* stringLib.c
-* TODO
-
 ## tokenizer.c
 
 Contains useful string manipulation functions. Such as count_words(), word_start()...
