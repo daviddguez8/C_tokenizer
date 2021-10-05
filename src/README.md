@@ -33,10 +33,10 @@ Contains useful string manipulation functions. Such as count_words(), word_start
 
 * **non_space_char(char c)**: Returns 1 if c is not a space char (' ', '\t', '\n'). 0 otherwise.
 
-* **count_words(char* words)**: This recieves a string of word(s) as input and returns the amount of 
+* **count_words(char\* words)**: This recieves a string of word(s) as input and returns the amount of 
 words contained in the phrase.
 
-* **word_start(char* words)**: This recieves a string of word(s) as input and returns a pointer to the 
+* **word_start(char\* words)**: This recieves a string of word(s) as input and returns a pointer to the 
 start of the first word in the phrase (inclusive). 
 
 * **word_end(char\* words)**: This recieves a string of word(s) as input and returns a pointer to the 
